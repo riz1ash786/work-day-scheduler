@@ -5,7 +5,7 @@ $("#currentDay").append(currentDate);
 // Using moment.js for current hour
 function currentTime() {
   var currentHour = moment().hour();
-
+  // Using each() method in jQuery
   $(".time-block").each(function () {
     var plannerTime = parseInt($(this).attr("id").split("hour")[1]);
     // Console log hours working
@@ -14,7 +14,7 @@ function currentTime() {
     // Adding colour to planner using if/else statments and jquery
     if (plannerTime < currentHour) {
       $(this).addClass("past");
-    } else if (plannerTime == currentHour) {
+    } else if (plannerTime === currentHour) {
       $(this).addClass("present");
     } else {
       $(this).addClass("future");
@@ -23,3 +23,7 @@ function currentTime() {
 }
 //Run function
 currentTime();
+
+// Local storage
+
+myStorage = window.localStorage;
