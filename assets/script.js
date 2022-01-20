@@ -1,13 +1,14 @@
-// Display today's day and date
+// Display today's day date and time with lowercase am/pm using moment.js
 var currentDate = moment().format("dddd MMM Do YYYY, h:mm a");
 $("#currentDay").append(currentDate);
 
-for (var i = 9; i < 18; i++) {
-  if (i > currentHour) {
-    $("#hour-" + i).addClass("future");
-  } else if (i === currentHour) {
-    $("#hour-" + i).addClass("past");
-  } else if (i < currentHour) {
-    $("#hour-" + i).addClass("past");
-  }
-}
+// Using moment.js for current hour
+function currentTime() {
+  var currentHour = moment().hour();
+
+  $(".time-block").each(function () {
+    var plannerTime = parseInt($(this).attr("id").split("hour")[1]);
+    // Console log hours working
+    console.log(plannerTime, currentHour);
+
+
