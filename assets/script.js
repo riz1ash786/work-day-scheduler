@@ -8,8 +8,7 @@ function currentTime() {
   // Using each() method in jQuery
   $(".time-block").each(function () {
     var plannerTime = parseInt($(this).attr("id").split("hour")[1]);
-    // Console log hours working
-    console.log(plannerTime, currentHour);
+    // console.log(plannerTime, currentHour);
 
     // Adding colour to planner using if/else statments and jquery
     if (plannerTime < currentHour) {
@@ -21,9 +20,27 @@ function currentTime() {
     }
   });
 }
-//Run function
+//Call function
 currentTime();
 
 // Local storage
 
-myStorage = window.localStorage;
+//jQuery save button, click listener
+$(".saveBtn").on("click", function () {
+  var inputText = $(this).siblings(".description").val(); // taken the change from the sibling html description attribute
+  var plannerTime = $(this).parent().attr("id"); // taken the change from the parent html id attribute
+
+  //set items in local storage.
+  localStorage.setItem(plannerTime, inputText);
+});
+// getitems from local storage for saved events to persist after user refresh
+$("#hour8 .description").val(localStorage.getItem("hour8"));
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour10 .description").val(localStorage.getItem("hour10"));
+$("#hour11 .description").val(localStorage.getItem("hour11"));
+$("#hour12 .description").val(localStorage.getItem("hour12"));
+$("#hour13 .description").val(localStorage.getItem("hour13"));
+$("#hour14 .description").val(localStorage.getItem("hour14"));
+$("#hour15 .description").val(localStorage.getItem("hour15"));
+$("#hour16 .description").val(localStorage.getItem("hour16"));
+$("#hour17 .description").val(localStorage.getItem("hour17"));
