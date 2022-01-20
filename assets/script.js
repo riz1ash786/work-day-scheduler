@@ -11,4 +11,15 @@ function currentTime() {
     // Console log hours working
     console.log(plannerTime, currentHour);
 
-
+    // Adding colour to planner using if/else statments and jquery
+    if (plannerTime < currentHour) {
+      $(this).addClass("past");
+    } else if (plannerTime == currentHour) {
+      $(this).addClass("present");
+    } else {
+      $(this).addClass("future");
+    }
+  });
+}
+//Run function
+currentTime();
