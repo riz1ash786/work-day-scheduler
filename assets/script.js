@@ -32,6 +32,7 @@ $(".saveBtn").on("click", function () {
   //set items in local storage key and value
   localStorage.setItem(plannerTime, inputText);
 });
+
 // getitems from local storage for saved events to persist after user refresh
 $("#hour8 .description").val(localStorage.getItem("hour8"));
 $("#hour9 .description").val(localStorage.getItem("hour9"));
