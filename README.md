@@ -16,6 +16,8 @@ I have been tasked to modify starter code to create a day planner application th
 
 - Finally, when the user refreshes the page the events remain within the timeblocks.
 
+- The 'currentTime' function will refresh every 60 seconds to keep timeblocks up to date.
+
 ---
 
 ## Screenshot of deployed application
@@ -35,6 +37,10 @@ Events saved to local storage.
 Saved events persist when the page is refreshed.
 
 ![saved events persist on refresh](./images/saved-events-persist-on-refresh.png)
+
+Timeblocks refresh every 60 seconds.
+
+![timeblocks refresh every 60secs](./images/console-log-test-page-refresh.png)
 
 ---
 
