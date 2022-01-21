@@ -23,14 +23,13 @@ function currentTime() {
 //Call function
 currentTime();
 
-// Local storage
-
+// Local storage from
 //jQuery save button, click listener
 $(".saveBtn").on("click", function () {
-  var inputText = $(this).siblings(".description").val(); // taken the change from the sibling html description attribute
-  var plannerTime = $(this).parent().attr("id"); // taken the change from the parent html id attribute
+  var inputText = $(this).siblings(".description").val(); // use of the sibling html description attribute
+  var plannerTime = $(this).parent().attr("id"); // use of the parent html id attribute
 
-  //set items in local storage.
+  //set items in local storage key and value
   localStorage.setItem(plannerTime, inputText);
 });
 // getitems from local storage for saved events to persist after user refresh
@@ -44,3 +43,4 @@ $("#hour14 .description").val(localStorage.getItem("hour14"));
 $("#hour15 .description").val(localStorage.getItem("hour15"));
 $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
+// alert(localStorage.getItem("test"));
