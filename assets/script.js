@@ -8,7 +8,7 @@ function currentTime() {
   // Using each() method in jQuery
   $(".time-block").each(function () {
     var plannerTime = parseInt($(this).attr("id").split("hour")[1]);
-    // console.log(plannerTime, currentHour);
+    // console.log(plannerTime, currentHour); console log to check that 'this' is looping correctly
 
     // Adding colour to planner using if/else statments and jquery
     if (plannerTime < currentHour) {
@@ -20,6 +20,8 @@ function currentTime() {
     }
   });
 }
+// Refreshes page every 60 seconds to update timeblocks
+var pageRefresh = setInterval(currentTime, 60000);
 //Call function
 currentTime();
 
