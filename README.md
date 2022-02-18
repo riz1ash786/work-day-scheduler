@@ -1,4 +1,4 @@
-# Work Day Schuduler
+# Work Day Scheduler
 
 ## Description
 
